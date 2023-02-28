@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "watch": "nodemon"
   },
   "keywords": [],
