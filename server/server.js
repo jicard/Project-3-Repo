@@ -5,7 +5,7 @@ const db = require("./config/connection");
 // const { ApolloServer } = require("apollo-server-express");
 // const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
-
+const User = require("./models/User");
 const app = express();
 const PORT = process.env.PORT || 3001;
 /*
@@ -19,9 +19,15 @@ const server = new ApolloServer({
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('*', (req, res) => {
-    res.send('<h1>Hello world</h1><br><button type="submit">Login</button>');
+app.get('/', (req, res) => {
+    res.send('<h1>Hello world</h1><br><input id="username" value="username"><br><input id="password" value="password"><button type="submit" href="/login">Login</button><br><button type="submit" href="/register">Register</button>');
 })
+app.post("/register", (req, res) => {
+
+});
+app.post("/login", (req, res) => {
+
+});
 
 app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
