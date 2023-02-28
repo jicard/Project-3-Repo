@@ -18,11 +18,10 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-/*
+
 app.get('*', (req, res) => {
     res.send('<h1>Hello world</h1>');
 })
-*/
 
 app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
