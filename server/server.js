@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('*', (req, res) => {
-    res.send('<h1>Hello world</h1>');
+    res.send('<h1>Hello world</h1><br><button type="submit">Login</button>');
 })
 
 app.listen(PORT, () => {
