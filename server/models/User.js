@@ -19,6 +19,8 @@ const userSchema = new Schema({
     required: true,
     minlength: 8,
   },
+
+  //should zip codes be encrypted?
   currentZip: {
     type: Number,
     match: [/^\d{5}$/, "Not a valid zip code"],
@@ -28,6 +30,7 @@ const userSchema = new Schema({
     match: [/^\d{5}$/, "Not a valid zip code"],
   },
   movingDate: {
+    
     //Date provided by user not from Date.now, method to get date from user input here, in server-side query, or in front-end?
     type: Date,
   },
