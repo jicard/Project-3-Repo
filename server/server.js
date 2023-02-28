@@ -99,7 +99,7 @@ app.post("/login", async (req, res) => {
       console.log(err);
     }
 });
-app.post("/welcome", auth, (req, res) => {
+app.post("/welcome", authMiddleware, (req, res) => {
     res.status(200).send("welcome");
 });
 
