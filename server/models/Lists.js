@@ -72,6 +72,20 @@ const listsSchema = new Schema({
       willDrive: Boolean,
     },
   ],
+  cleaningList: [
+    {
+      taskName: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+      //e.g. living room, kitchen etc.
+      room: {
+        type: String,
+        trim: true,
+      },
+    },
+  ],
 });
 
 const Lists = model("Lists", listsSchema);
