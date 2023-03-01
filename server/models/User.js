@@ -20,7 +20,7 @@ const userSchema = new Schema({
     minlength: 8,
   },
 
-  //should zip codes be encrypted?
+  //should zip codes be encrypted? Maybe addresses rather than zips?
   currentZip: {
     type: Number,
     match: [/^\d{5}$/, "Not a valid zip code"],
