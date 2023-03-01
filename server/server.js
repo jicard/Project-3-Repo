@@ -18,7 +18,7 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+/*
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/index.html'));
 })
@@ -73,6 +73,10 @@ app.post("/login", async (req, res) => {
       console.log(err);
     }
 });
+*/
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
 
 app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
@@ -80,10 +84,6 @@ app.listen(PORT, () => {
   });
 
 /*
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
-
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
