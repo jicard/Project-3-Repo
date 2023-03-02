@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <List />
-    <Route path='/' exact component={HomePage} />
+    <HomePage/>
     </>
   );
 }
