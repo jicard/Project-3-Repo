@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
+import '../App.css';
+//import { Button } from './Button';
 
-function homepage() {
+import './HomePage.css';
+
+function HomePage() {
   return (
     <div className='homepage-container'>
       <video src='/images/movingvideo.mp4' autoPlay loop muted />
@@ -27,4 +31,4 @@ function homepage() {
   );
 }
 
-export default homepage
+export default HomePage;
