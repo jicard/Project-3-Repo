@@ -21,7 +21,9 @@
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "graphql-scalars": "^1.20.1",
-    "serve": "^14.2.0"
+    "react-router-dom": "^6.8.2",
+    "serve": "^14.2.0",
+    "styled-components": "^5.3.8"
   },
   "engines": {
     "node": "16.18.0"
