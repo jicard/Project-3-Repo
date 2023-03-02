@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import List from './components/list'
-import TheFooter from './components/Footer'
+import TheFooter from './components/footer'
 import Navbar from './components/Navbar'
 
 import Homepage from './components/NavbarPages/homepage'
