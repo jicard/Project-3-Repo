@@ -38,3 +38,30 @@ video {
   .hero-btns .btn {
     margin: 6px;
   }
+
+  @media screen and (max-width: 960px) {
+    .homepage-container > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .homepage-container > h1 {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+    .homepage-container > p {
+      font-size: 30px;
+    }
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
