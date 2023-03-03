@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-
+import WelcomePage from './components/WelcomePage/welcomepage'
 import List from './components/list'
 import TheFooter from './components/Footer'
 import Navbar from './components/Navbar'
@@ -13,6 +13,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <WelcomePage/>
       <List />
       <TheFooter />
         <Routes>

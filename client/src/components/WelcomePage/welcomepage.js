@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Button from '../Button/Button';
+import './welcomepage.css';
+import MP4 from 'public/images/movingvideo.mp4'
 
-import './HomePage.css';
-
-function HomePage() {
+const WelcomePage = () => {
   return (
     <div className='homepage-container'>
-      <video src='/images/movingvideo.mp4' autoPlay loop muted />
+      <video src={MP4} autoPlay loop muted />
       <h1>MOVING?</h1>
       <p>We Help You Stay Organized!</p>
       <div className='hero-btns'>
@@ -28,6 +28,6 @@ function HomePage() {
       </div>
     </div>
   );
-}
+};
 
-export default HomePage;
+export default WelcomePage;
