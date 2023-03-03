@@ -21,7 +21,15 @@ const listsSchema = new Schema(
     ],
   }
 
-  // packingList: [
+  
+);
+
+const Lists = model("Lists", listsSchema);
+
+module.exports = Lists;
+
+//more detailed Lists fields
+// packingList: [
   //   {
   //     packItemName: {
   //       type: String,
@@ -105,8 +113,3 @@ const listsSchema = new Schema(
   //     },
   //   },
   // ],
-);
-
-const Lists = model("Lists", listsSchema);
-
-module.exports = Lists;

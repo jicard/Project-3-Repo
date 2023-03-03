@@ -21,6 +21,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -38,7 +39,8 @@ const resolvers = {
 
       return { token, user };
     },
-    //addList--user selects type of list from dropdown menu which becomes key in list object
+
+    //addList--takes listName, creates list and pushes to current User's array of lists
     addList: async (parent, { listName }, context) => {
       if (context.user) {
         const list = await Lists.create({
@@ -54,60 +56,77 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    //setListItem--user adds or updates item of array of designated field within lists object
 
-    setListItem: async (parent, { listId, itemName, itemNotes }, context) => {},
+    //addListItem--takes listName, itemName and itemNotes, creates list item and pushes to list
+    addListItem: async (parent, { input }, context) => {
+      if (context.user) {
+        return Lists.findOneAndUpdate(
+          { _id: listId },
+          {
+            $addToSet: {
+              listItems: { itemName, itemNotes },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
 
-    //     addComment: async (parent, { thoughtId, commentText }, context) => {
-    //       if (context.user) {
-    //         return Thought.findOneAndUpdate(
-    //           { _id: thoughtId },
-    //           {
-    //             $addToSet: {
-    //               comments: { commentText, commentAuthor: context.user.username },
-    //             },
-    //           },
-    //           {
-    //             new: true,
-    //             runValidators: true,
-    //           }
-    //         );
-    //       }
-    //       throw new AuthenticationError('You need to be logged in!');
-    //     },
-    //     removeThought: async (parent, { thoughtId }, context) => {
-    //       if (context.user) {
-    //         const thought = await Thought.findOneAndDelete({
-    //           _id: thoughtId,
-    //           thoughtAuthor: context.user.username,
-    //         });
+    //update listItem-takes listItem id and list item input to update
+    updateListItem: async (parent, { id, input }, context) => {
+      if (context.user) {
+        return Lists.findOneAndUpdate(
+          { _id: listId, "listItems._id": id },
+          {
+            $set: {
+              listItems: { itemName, itemNotes },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
 
-    //         await User.findOneAndUpdate(
-    //           { _id: context.user._id },
-    //           { $pull: { thoughts: thought._id } }
-    //         );
+    //removeList--takes listId, deletes designated list and pulls from user's list array
+    removeList: async (parent, { listId }, context) => {
+      if (context.user) {
+        const list = await Lists.findOneAndDelete({
+          _id: listId,
+          listUser: context.user.username,
+        });
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { lists: list._id } }
+        );
+        return list;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
 
-    //         return thought;
-    //       }
-    //       throw new AuthenticationError('You need to be logged in!');
-    //     },
-    //     removeComment: async (parent, { thoughtId, commentId }, context) => {
-    //       if (context.user) {
-    //         return Thought.findOneAndUpdate(
-    //           { _id: thoughtId },
-    //           {
-    //             $pull: {
-    //               comments: {
-    //                 _id: commentId,
-    //                 commentAuthor: context.user.username,
-    //               },
-    //             },
-    //           },
-    //           { new: true }
-    //         );
-    //       }
-    //       throw new AuthenticationError('You need to be logged in!');
-    //     },
+    removeListItem: async (parent, { listId, listItemId }, context) => {
+      if (context.user) {
+        return Lists.findOneAndUpdate(
+          { _id: listId },
+          {
+            $pull: {
+              listItems: {
+                _id: listItemId,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 };
 
