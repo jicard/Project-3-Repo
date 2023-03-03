@@ -16,11 +16,14 @@ const typeDefs = gql`
   }
 
   type Lists {
-    packingList: [PackingList]
-    addressChanges: [AddressChange]
-    shoppingList: [ShoppingList]
-    movers: [Mover]
-    cleaningList: [CleaningList]
+    listName: String!
+    listUser: String!
+    listItems: [ListItem]
+    // packingList: [PackingList]
+    // addressChanges: [AddressChange]
+    // shoppingList: [ShoppingList]
+    // movers: [Mover]
+    // cleaningList: [CleaningList]
   }
 
   
@@ -38,8 +41,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addList
-    setListItem
+    addList (listName: String!): Lists
+    setListItem(listName: listName!, itemName: String!, itemNotes: String ): Lists
 
   }
 `;
