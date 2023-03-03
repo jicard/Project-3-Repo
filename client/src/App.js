@@ -3,7 +3,7 @@ import './App.css';
 
 import List from './components/list'
 import TheFooter from './components/Footer'
-import Navbar from './components/Navbar'
+import AppNavbar from './components/Navbar/index'
 import Homepage from './components/NavbarPages/homepage'
 import About from './components/NavbarPages/about'
 import listButton from './components/NavbarPages/listButton'
@@ -12,7 +12,7 @@ import ContactUs from './components/FooterPages/contactUs'
 function App() {
   return (
     <Router>
-      <Navbar />
+      <AppNavbar />
       <List />
       <TheFooter />
         <Routes>
