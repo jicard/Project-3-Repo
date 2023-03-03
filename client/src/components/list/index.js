@@ -1,23 +1,26 @@
-//imports
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
+const ListComponent = () => {
+  const [items, setItems] = useState([]);
 
-export default function List () {
-    //API Call
-    return (
-        // map through return data
-        // listData.map(item) item.packItemName, item.room
-        <>
-        <h3>Packing List</h3>
-        <ul>
-    
-            <li>Hello</li>
-            <li>World</li>
-            <li>we made a list!</li>
-            
-        </ul>
-       </>
+  useEffect(() => {
+    axios
+      .get("/api/items")
+      .then((res) => setItems(res.data))
+      .catch((err) => console.log(err));
+  }, []);
 
-    )
-}
+  return (
+    <div>
+      <h3>List Component</h3>
+      <ul>
+        {items.map((item) => (
+          <li key={item._id}>{item.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-
+export default ListComponent;
