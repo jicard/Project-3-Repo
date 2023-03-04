@@ -1,13 +1,7 @@
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 50%;
-    position: fixed;
-    z-index: 1;
-  }
+
   
   .homepage-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -17,23 +11,50 @@ video {
     object-fit: contain;
     background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
   }
-  
-  .homepage-container > h1 {
+
+
+  .main-info {
+    height: 29vw;
+    width: 79vw;
+
+  }
+
+  .main-info >img {
+    border-radius: 307px 5px 3px;
+    position: absolute;
+    top: 189px;
+    left: 60vw;
+    width: 28vw;
+    height: 21vw;
+  }
+
+  .main-info > h1 {
     color: #fff;
     font-size: 100px;
-    margin-top: -100px;
+    margin-top: 64px;
+    margin-bottom: 2vw;
+    margin-left: 8vw;
   }
   
-  .homepage-container > p {
+  .main-info > p {
     margin-top: 8px;
     color: #000;
     font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 7vw;
   }
   
+
+.sub-section > img {
+  height: 10vw;
+
+}
+
+
   .hero-btns {
-    margin-top: 32px;
+    margin-top: 1vw;
+    left: 10vw;
+    position: relative;
   }
   
   .hero-btns .btn {
