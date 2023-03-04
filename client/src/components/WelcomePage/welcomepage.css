@@ -44,12 +44,32 @@
     margin-left: 7vw;
   }
   
-
-.sub-section > img {
-  height: 10vw;
-
+.sub-section {
+  background: #E6ECFF;
+  height: 29vw;
+  padding: 0vw 16vw;
+  display: flex;
 }
 
+
+.sub-section > img {
+  height: 18vw;
+
+}
+.text-box {
+  width: 18vw;
+
+}
+ h2 {
+  width: 18vw;
+  border: solid yellow;
+  height: 10vw;
+  display: block;
+}
+
+.text-box > p {
+  width: 18vw
+}
 
   .hero-btns {
     margin-top: 1vw;
