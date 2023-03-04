@@ -9,7 +9,7 @@ justify-content: space-between;
 z-index: 12;
 justify-content: center;
 bottom: 0;
-position: absolute;
+position: relative;
 width: 100%;
 `;
 
