@@ -45,30 +45,34 @@
   }
   
 .sub-section {
-  background: #E6ECFF;
-  height: 29vw;
+  background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
+  height: 23vw;
   padding: 0vw 16vw;
   display: flex;
+  width: 67vw;
 }
 
 
 .sub-section > img {
-  height: 18vw;
+  margin-top: 3vw;
+  height: 16vw;
 
 }
 .text-box {
-  width: 18vw;
-
+  width: 25vw;
+  margin-top: 3vw;
+  padding-left: 8vw;
+  height: 15vw;
 }
+
  h2 {
-  width: 18vw;
-  border: solid yellow;
-  height: 10vw;
+  height: 5vw;
   display: block;
+  color: #213e78;
 }
 
 .text-box > p {
-  width: 18vw
+  color: #213e78;
 }
 
   .hero-btns {
