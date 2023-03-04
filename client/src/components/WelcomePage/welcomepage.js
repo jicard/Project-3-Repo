@@ -36,7 +36,7 @@ const WelcomePage = () => {
         <img src={checklist} alt='checklist' />
         <div className='text-box'>
           <h2>Designed with the Hardest Moves in Mind</h2>
-          <p>Moving is never easy, no matter how many times you've moved.With GET MOVING we are here to help keep your mind at ease. With our pre-templated checklist, we help check the boxes as your moving date gets closer.</p>  
+          <p>Moving is never easy, no matter how many times you've moved. With <strong>GET MOVING</strong> we are here to help keep your mind at ease. With our pre-templated checklist, we help check the boxes as your moving date gets closer.</p>  
         </div>
       </div>
     </div>
