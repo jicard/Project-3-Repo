@@ -2,7 +2,8 @@ const { gql } = require("apollo-server-express");
 //const { Date } = require("graphql-scalars");
 
 const typeDefs = gql`
-  type User {
+  
+ type User {
     _id: ID!
     username: String!
     email: String!
@@ -20,9 +21,18 @@ const typeDefs = gql`
   }
 
   type Lists {
+    _id: ID!
     listName: String!
     listUser: String!
-    listItems: [String]
+    listItems: [ListItem]
+  }
+
+  type ListItem {
+    _id: ID!
+    listId: ID!
+    itemName: String!
+    itemNotes: String
+
   }
 
   type Auth {
