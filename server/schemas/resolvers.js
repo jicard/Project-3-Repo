@@ -16,12 +16,14 @@ const resolvers = {
   },
 
   Mutation: {
+    //takes username, email, and password hash to create new user
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
     },
 
+    //takes user email and password, logs user in
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -38,6 +40,36 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+
+    setUserInfo: async (
+      parent,
+      {
+        username,
+        email,
+        password,
+        currentAddress,
+        destinationAddress,
+        movingDate,
+      },
+      context
+    ) => {
+      if (context.user) {
+        const userInfo = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            username,
+            email,
+            password,
+            currentAddress,
+            destinationAddress,
+            movingDate,
+          }
+        );
+
+        return userInfo;
+      }
+      throw new AuthenticationError("You need to be logged in!");
     },
 
     //addList--takes listName, creates list and pushes to current User's array of lists
