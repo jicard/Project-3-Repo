@@ -15,6 +15,7 @@ video {
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     object-fit: contain;
+    background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
   }
   
   .homepage-container > h1 {
