@@ -12,67 +12,44 @@
   }
 
 
-  .main-info {
-    min-height: 29vw;
-    max-width: 79vw;
+  .account-settings,
+  .moving-details {
+    min-height: 20vw;
+    max-width: 62vw;
+    background-color: #E6ECFF;
+    color: #213E78;
+    border-radius: 10px;
+    width: 62vw;
+    margin: 30px;
 
   }
 
-  .main-info >img {
-    border-radius: 307px 5px 3px;
-    position: relevant;
-    top: 189px;
-    left: 60vw;
-    max-width: 28vw;
-    min-height: 21vw;
-  }
 
-  .main-info > h1 {
-    color: #fff;
-    font-size: 100px;
-    margin-top: 64px;
-    margin-bottom: 2vw;
-    margin-left: 8vw;
+
+ h1 {
+    color: #213E78;
+    font-size: 35px;
   }
   
-  .main-info > p {
+ text {
     margin-top: 8px;
-    color: #000;
+    color: #213E78;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 7vw;
   }
   
-.sub-section {
-  background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
-  height: 23vw;
-  padding: 0vw 16vw;
-  display: flex;
-  width: 67vw;
-}
 
 
-.sub-section > img {
-  margin-top: 3vw;
-  height: 16vw;
 
-}
-.text-box {
-  width: 25vw;
-  margin-top: 3vw;
-  padding-left: 8vw;
-  height: 15vw;
-}
 
  h2 {
-  height: 5vw;
+  font-size: 20px;
   display: block;
-  color: #213e78;
+  color: #213E78;
 }
 
-.text-box > p {
-  color: #213e78;
-}
+
 
   .hero-btns {
     margin-top: 1vw;
@@ -97,10 +74,7 @@
       margin-top: -100px;
     }
   
-    .homepage-container > p {
-      font-size: 30px;
-    }
-    
+
   
     .btn-mobile {
       display: block;

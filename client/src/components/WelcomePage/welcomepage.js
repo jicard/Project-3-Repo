@@ -10,7 +10,6 @@ const WelcomePage = () => {
   return (
     <div className='homepage-container'>
       <div className= 'main-info'>
-      <img src={GIF} alt="Moving Truck" />
         <h1>Moving?</h1>
         <p>Let us help ease the transition!</p>
         <div className='hero-btns'>
@@ -29,8 +28,8 @@ const WelcomePage = () => {
           >
             Login 
           </Button>
-
         </div>
+        <img src={GIF} alt="Moving Truck" />
       </div>
       <div className='sub-section'>
         <img src={checklist} alt='checklist' />
