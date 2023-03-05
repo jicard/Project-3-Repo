@@ -10,78 +10,61 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
   }
+.moving-details {
+    display: inline-flex;
+    flex-direction: column;
 
+}
 
-  .main-info {
-    min-height: 29vw;
-    max-width: 79vw;
-
+  .account-settings,
+  .moving-details {
+    min-height: 17vw;
+    max-width: 62vw;
+    background-color: #E6ECFF;
+    color: #213E78;
+    width: 62vw;
+    border-radius: 10px;
+    margin: 10px;
   }
 
-  .main-info >img {
-    border-radius: 307px 5px 3px;
-    position: relevant;
-    top: 189px;
-    left: 60vw;
-    max-width: 28vw;
-    min-height: 21vw;
-  }
-
-  .main-info > h1 {
-    color: #fff;
-    font-size: 100px;
-    margin-top: 64px;
-    margin-bottom: 2vw;
-    margin-left: 8vw;
-  }
+ h1 {
+    color: #213E78;
+    font-size: 35px;
+    text-align: center;
+}
   
-  .main-info > p {
-    margin-top: 8px;
-    color: #000;
-    font-size: 32px;
+ text {
+    color: #213E78;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 7vw;
-  }
+}
   
-.sub-section {
-  background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
-  height: 23vw;
-  padding: 0vw 16vw;
-  display: flex;
-  width: 67vw;
-}
 
-
-.sub-section > img {
-  margin-top: 3vw;
-  height: 16vw;
-
-}
-.text-box {
-  width: 25vw;
-  margin-top: 3vw;
-  padding-left: 8vw;
-  height: 15vw;
-}
-
- h2 {
-  height: 5vw;
+h3 {
+  font-size: 20px;
   display: block;
-  color: #213e78;
+  color: #213E78;
+  margin-left: 2vw;
 }
 
-.text-box > p {
-  color: #213e78;
-}
 
-  .hero-btns {
+  .account-btns {
     margin-top: 1vw;
-    left: 10vw;
     position: relative;
+    position: relative;
+    justify-content: center;
+    display: inline-flex;
   }
   
-  .hero-btns .btn {
+  .account-btns .btn {
     margin: 6px;
+    padding: 10px 26px;
+    font-size: 20px;
+    background-color: #6faed7;
+    color: white;
+    border-radius: 5px;
+    max-width: 20vw;
   }
 
   @media screen and (max-width: 960px) {
@@ -97,10 +80,7 @@
       margin-top: -100px;
     }
   
-    .homepage-container > p {
-      font-size: 30px;
-    }
-    
+
   
     .btn-mobile {
       display: block;
