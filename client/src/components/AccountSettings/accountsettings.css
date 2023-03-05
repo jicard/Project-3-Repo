@@ -18,14 +18,13 @@
 
   .account-settings,
   .moving-details {
-    min-height: 29vw;
+    min-height: 17vw;
     max-width: 62vw;
     background-color: #E6ECFF;
     color: #213E78;
     width: 62vw;
     border-radius: 10px;
     margin: 10px;
-    line-height: 7px;
   }
 
  h1 {
@@ -35,34 +34,37 @@
 }
   
  text {
-    margin-top: 8px;
     color: #213E78;
-    font-size: 32px;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 7vw;
 }
   
 
- .account-settings > h2,
- .moving-details > h2 {
+h3 {
   font-size: 20px;
   display: block;
   color: #213E78;
+  margin-left: 2vw;
 }
 
-.moving-details > h2,
-.moving-details > text{
-    max-width: 30vw;
-}
 
-  .hero-btns {
+  .account-btns {
     margin-top: 1vw;
-    left: 10vw;
     position: relative;
+    position: relative;
+    justify-content: center;
+    display: inline-flex;
   }
   
-  .hero-btns .btn {
+  .account-btns .btn {
     margin: 6px;
+    padding: 10px 26px;
+    font-size: 20px;
+    background-color: #6faed7;
+    color: white;
+    border-radius: 5px;
+    max-width: 20vw;
   }
 
   @media screen and (max-width: 960px) {
