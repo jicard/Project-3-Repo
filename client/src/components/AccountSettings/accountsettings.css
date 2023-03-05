@@ -10,26 +10,29 @@
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
   }
+.moving-details {
+    display: inline-flex;
+    flex-direction: column;
 
+}
 
   .account-settings,
   .moving-details {
-    min-height: 20vw;
+    min-height: 29vw;
     max-width: 62vw;
     background-color: #E6ECFF;
     color: #213E78;
-    border-radius: 10px;
     width: 62vw;
-    margin: 30px;
-
+    border-radius: 10px;
+    margin: 10px;
+    line-height: 7px;
   }
-
-
 
  h1 {
     color: #213E78;
     font-size: 35px;
-  }
+    text-align: center;
+}
   
  text {
     margin-top: 8px;
@@ -37,19 +40,20 @@
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 7vw;
-  }
+}
   
 
-
-
-
- h2 {
+ .account-settings > h2,
+ .moving-details > h2 {
   font-size: 20px;
   display: block;
   color: #213E78;
 }
 
-
+.moving-details > h2,
+.moving-details > text{
+    max-width: 30vw;
+}
 
   .hero-btns {
     margin-top: 1vw;
