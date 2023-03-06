@@ -1,3 +1,4 @@
+/*
 import { gql } from "@apollo/client";
 //mutations
 export const LOGIN_USER = gql`
@@ -124,3 +125,4 @@ mutation removeListITEM($listId: ID!, $listItemId: ID!) {
   }
 }
 `;
+*/
