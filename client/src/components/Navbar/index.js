@@ -1,11 +1,7 @@
 import React from 'react';
 import {
-    Nav,
-    NavLink,
-    Bars,
-    NavMenu,
-    NavBtn,
-    NavBtnLink,
+    Bars, Nav, NavBtn,
+    NavBtnLink, NavLink, NavMenu
 } from './NavbarElements';
 
 const AppNavbar = () => {
