@@ -1,0 +1,96 @@
+
+  
+  .homepage-container {
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
+  }
+.moving-details {
+    display: inline-flex;
+    flex-direction: column;
+
+}
+
+  .account-settings,
+  .moving-details {
+    min-height: 17vw;
+    max-width: 62vw;
+    background-color: #E6ECFF;
+    color: #213E78;
+    width: 62vw;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+ h1 {
+    color: #213E78;
+    font-size: 35px;
+    text-align: center;
+}
+  
+ text {
+    color: #213E78;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 7vw;
+}
+  
+
+h3 {
+  font-size: 20px;
+  display: block;
+  color: #213E78;
+  margin-left: 2vw;
+}
+
+
+  .account-btns {
+    margin-top: 1vw;
+    position: relative;
+    position: relative;
+    justify-content: center;
+    display: inline-flex;
+  }
+  
+  .account-btns .btn {
+    margin: 6px;
+    padding: 10px 26px;
+    font-size: 20px;
+    background-color: #6faed7;
+    color: white;
+    border-radius: 5px;
+    max-width: 20vw;
+  }
+
+  @media screen and (max-width: 960px) {
+    .homepage-container > h1 {
+      font-size: 70px;
+      margin-top: -160px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .homepage-container > h1 {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+
+  
+    .btn-mobile {
+      display: block;
+      text-decoration: none;
+    }
+  
+    .btn {
+      width: 100%;
+    }
+  }
+
+
+

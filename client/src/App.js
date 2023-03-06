@@ -1,26 +1,26 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-
-import List from './components/list'
-import TheFooter from './components/footer'
+import 'react-router';
+import WelcomePage from './components/WelcomePage/welcomepage'
+import AccountSettings from './components/AccountSettings/accountsettings'
+import List from './components/list/index'
+import TheFooter from './components/footer/index'
 import Navbar from './components/Navbar'
-
-import Homepage from './components/NavbarPages/homepage'
 import About from './components/NavbarPages/about'
-import listButton from './components/NavbarPages/listButton'
-import ContactUs from './components/FooterPages/contactUs'
+import ContactUs from './components/FooterPages/ContactUs/contactUs'
+
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <List />
-      <TheFooter />
-        <Routes>
-          <Route path='/' exact component={Homepage} />
-          <Route path='/about' exact component={About} />
-          <Route path='/aboutus' exact component={ContactUs} />
+      <Routes>
+        <Route path='/' element={<WelcomePage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/aboutus' element={<ContactUs/>} />
       </Routes>
+      <TheFooter />
     </Router>
   );
 }
