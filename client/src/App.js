@@ -8,22 +8,23 @@ import Navbar from './components/Navbar'
 import Homepage from './components/NavbarPages/homepage'
 import About from './components/NavbarPages/about'
 import listButton from './components/NavbarPages/listButton'
-import ContactUs from './components/FooterPages/contactUs'
+import ContactUs from './components/FooterPages/ContactUs/contactUs'
+
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <WelcomePage/>
-      <List />
-      <TheFooter />
+      {/* <List /> */}
         <Routes>
-          <Route path='/' exact component={Homepage} />
-          <Route path='/about' exact component={About} />
-          <Route path='/settings' exact component={AccountSettings}/>>
-          {/*<Route path='/aboutus' exact component={ContactUs} />*/}
+          <Route path='/' element={<WelcomePage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/settings' element={<AccountSettings/>} />
+          <Route path='/contact-us' element={<ContactUs/>} />
       </Routes>
+      <TheFooter />
     </Router>
+    
   );
 }
 
