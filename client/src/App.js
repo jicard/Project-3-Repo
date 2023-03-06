@@ -14,8 +14,10 @@ import ContactUs from './components/FooterPages/ContactUs/contactUs'
 function App() {
   return (
     <Router>
+
       <Navbar />
       <TheFooter />
+      
       <Routes>
         <Route path='/' element={<WelcomePage />} />
         <Route path='/about' element={<About />} />
