@@ -2,7 +2,8 @@ import React from 'react';
 import DevProfiles from './contactusComponent';
 
 const contactUs = () => {
-    return (
+//function contactUs() {  
+return (
         <div>
             <DevProfiles />
         </div>
