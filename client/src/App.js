@@ -1,27 +1,28 @@
-import { Routes, Route, Router } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import React, { Component } from 'react';
+import 'react-router';
 import WelcomePage from './components/WelcomePage/welcomepage'
 import AccountSettings from './components/AccountSettings/accountsettings'
 import List from './components/list/index'
 import TheFooter from './components/footer/index'
 import Navbar from './components/Navbar'
 import About from './components/NavbarPages/about'
-// import ContactUs from './components/FooterPages/contactUs'
+import ContactUs from './components/FooterPages/ContactUs/contactUs'
 
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Routes>
-        <Route path='/' exact element={<WelcomePage />} />
-        <Route path='/about' exact element={About} />
-        {/*<Route path='/aboutus' exact component={ContactUs} />*/}
-      </Routes>
-      <List />
       <TheFooter />
-    </>
+      <Routes>
+        <Route path='/' element={<WelcomePage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/aboutus' element={<ContactUs/>} />
+      </Routes>
+      
+    </Router>
   );
 }
 
