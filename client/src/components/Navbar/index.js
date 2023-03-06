@@ -24,9 +24,6 @@ const AppNavbar = () => {
                     {/* Second Nav */}
                     {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
                 </NavMenu>
-                <NavBtn>
-                    <NavBtnLink>Login/Sign Up</NavBtnLink>
-                </NavBtn>
             </Nav>
             
         </>

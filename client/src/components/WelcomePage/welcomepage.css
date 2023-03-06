@@ -42,10 +42,10 @@
   
 .sub-section {
   background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
-  height: 23vw;
-  padding: 0vw 16vw;
+  /* height: 23vw; */
+  /* padding: 0vw 16vw; */
   display: flex;
-  width: 67vw;
+  width: 65%;
 }
 
 
@@ -59,12 +59,19 @@
   margin-top: 3vw;
   padding-left: 8vw;
   height: 15vw;
+  text-align: center;
+  font-size: 130%;
 }
 
  h2 {
   height: 5vw;
-  display: block;
+  display: flex;
   color: #213e78;
+}
+
+h5 {
+  font-size: 130%;
+  display: flex;
 }
 
 .text-box > p {
