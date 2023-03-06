@@ -1,79 +1,90 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+import { ADD_LIST, ADD_ITEM, REMOVE_LIST } from '../../utils/mutations';
 
 const ListComponent = () => {
-  const [items, setItems] = useState([]);
-  const [newItem, setNewItem] = useState("");
+    const [newItem, setNewItem] = useState("");
+    const [items, setItems] = useState([]);
+    // const [addList] = useMutation(ADD_LIST);
+    // const [removeList] = useMutation(REMOVE_LIST);
+    const [addItem] = useMutation(ADD_ITEM);
+    const { loading, data } = useQuery(QUERY_USER);
+    const userData = data?.user || {};
 
-  useEffect(() => {
-    axios.get('/api/items')
-      .then(res => {
-        setItems(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
+    const handleNewItem = (e) => {
 
-  const handleNewItem = (e) => {
-    setNewItem(e.target.value);
-  }
+        setNewItem(e.target.value);
 
-  const handleAddItem = () => {
-    axios.post('/api/items', { item: newItem })
-      .then(res => {
-        setItems([...items, res.data]);
+    }
+
+    const handleAddItem = () => {
+        addItem({
+            variables: {
+                itemName: newItem,
+                itemUser: userData._id,
+                listId: userData.lists[0]._id,
+            }
+
+        })
+
+        setItems([...items, newItem]);
         setNewItem("");
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
+    }
 
-  const handleDeleteItem = (id) => {
-    axios.delete(`/api/items/${id}`)
-      .then(res => {
-        setItems(items.filter(item => item._id !== id));
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
+    // const handleAddList = () => {
+    //     addList({
+    //         variables: {
+    //             listName: "New List",
+    //             listUser: userData._id,
+    //         }
+    //     })
 
-  return (
-    <div>
-      <h3>List Component</h3>
-      <ul>
-        {items.map(item => (
-          <li key={item._id}>
-            {item.name}
-            <button onClick={() => handleDeleteItem(item._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-      <div>
-        <input type="text" value={newItem} onChange={handleNewItem} />
-        <button onClick={handleAddItem}>Add Item</button>
-      </div>
-    </div>
-  );
+
+    // }
+
+    // const handleRemoveList = (listId) => {
+    //     removeList({
+    //         variables: {
+    //             listId: listId,
+    //         }
+    //     })
+    // }
+
+    //strikethrough list item on click
+    const handleStrikethrough = (e) => {
+        e.target.style.textDecoration = "line-through";
+        
+    }
+
+
+
+    if (loading) {
+        return <div>Loading...</div>;
+
+    }
+
+    return (
+        <div>
+            <h1>My Lists</h1>
+            <div>
+                <h2>{userData.lists[0].listName}</h2>
+                <ul>
+                    {userData.lists[0].listItems.map((item) => (
+                        <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
+                    ))}
+                </ul>
+                <input type="text" value={newItem} onChange={handleNewItem} />
+                <button onClick={handleAddItem}>Add Item</button>
+            </div>
+        </div>
+    )
 }
+
 
 export default ListComponent;
 
-// const deleteItem = (index) => {
-//     const updatedItems = items.filter((elem) => {
-//       if (index == elem.id) {
-//         elem.strike = true;
-//       }
-//       return elem;
-//     });
-
-//     setItems(updatedItems);
-//   };
-
-// const [strike, setStrike] = useState(false);
-
+//
 //<h3
 // style={{
 //     textDecoration: elem.strike ? 'line-through' : 'none',
