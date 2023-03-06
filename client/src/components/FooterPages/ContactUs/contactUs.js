@@ -4,9 +4,9 @@ import DevProfiles from './contactusComponent';
 const contactUs = () => {
 //function contactUs() {  
 return (
-        <div>
+        //<div>
             <DevProfiles />
-        </div>
+        //</div>
     );
 };
 

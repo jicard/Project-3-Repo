@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./contactusComponent.css";
 
-import johnGrant from "../../assets/dev-profilephotos/johng001.png";
-import joshIcard from "../../assets/dev-profilephotos/joshi001.png";
-import juliaJohnson from "../../assets/dev-profilephotos/juliaj001.png";
-import maryGreenwood from "../../assets/dev-profilephotos/maryg001.png";
-import michaelSmitte from "../../assets/dev-profilephotos/michaels001.png";
-import shawnThomas from "../../assets/dev-profilephotos/shawnt001.jpeg";
+import johnGrant from "../../../assets/dev-profilephotos/johng001.png";
+import joshIcard from "../../../assets/dev-profilephotos/joshi001.png";
+import juliaJohnson from "../../../assets/dev-profilephotos/juliaj001.png";
+import maryGreenwood from "../../../assets/dev-profilephotos/maryg001.png";
+import michaelSmitte from "../../../assets/dev-profilephotos/michaels001.png";
+import shawnThomas from "../../../assets/dev-profilephotos/shawnt001.jpeg";
 
-export default function DevProfiles() {
+const DevProfiles = () => {
   const devprofileData = [
     {
       id: 1,
@@ -59,7 +59,7 @@ export default function DevProfiles() {
       GitHub: "https://www.github.com/",
       LinkedIn: "https://www.linkedin.com",
     },
-  ];
+  ]
 
   return (
     <div className="contactus-container">
@@ -119,3 +119,6 @@ export default function DevProfiles() {
     </div>
   );
 }
+
+export default DevProfiles;
+

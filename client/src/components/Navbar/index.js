@@ -16,13 +16,13 @@ const AppNavbar = () => {
                 <Bars />
 
                 <NavMenu>
-                    <NavLink to='/about' activeStyle>
+                    <NavLink to='/about' activestyle="true">
                         About
                     </NavLink>
-                    <NavLink to='/' activeStyle>
+                    <NavLink to='/' activestyle="true">
                         Homepage
                     </NavLink>
-                    <NavLink to='/lists' activeStyle>
+                    <NavLink to='/lists' activestyle="true">
                         List Button
                     </NavLink>
                     {/* Second Nav */}

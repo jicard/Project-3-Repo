@@ -8,7 +8,7 @@ const TheFooter = () => {
     return (
         <>
             <Footer>
-                    <FooterLink to ="/contact-us" activeStyle>
+                    <FooterLink to ="/aboutus" activestyle="true">
                         Contact Us
                     </FooterLink>
             </Footer>
