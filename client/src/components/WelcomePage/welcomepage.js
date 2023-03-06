@@ -10,6 +10,9 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useMutation } from '@apollo/client';
 import { ADD_USER, LOGIN_USER } from '../../utils/mutations'
+import TheFooter from '../footer/index'
+import AppNavbar from '../Navbar'
+import { Nav } from '../Navbar/NavbarElements';
 
 const WelcomePage = () => {
 
@@ -51,6 +54,7 @@ const WelcomePage = () => {
   }
 
   return (
+    <>
     <div className='homepage-container'>
       <div className='main-info'>
         <h1>Moving?</h1>
@@ -115,6 +119,7 @@ const WelcomePage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
