@@ -8,7 +8,8 @@ import {
     NavBtnLink,
 } from './NavbarElements';
 
-const Navbar = () => {
+const AppNavbar = () => {
+
     return (
         <>
             <Nav>
@@ -21,9 +22,6 @@ const Navbar = () => {
                     <NavLink to='/' activeStyle>
                         Homepage
                     </NavLink>
-                    <NavLink activeStyle>
-                        Sign Up
-                    </NavLink>
                     <NavLink to='/lists' activeStyle>
                         List Button
                     </NavLink>
@@ -31,11 +29,12 @@ const Navbar = () => {
                     {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink>Sign In</NavBtnLink>
+                    <NavBtnLink>Login/Sign Up</NavBtnLink>
                 </NavBtn>
             </Nav>
+            
         </>
     );
 };
 
-export default Navbar;
+export default AppNavbar;
