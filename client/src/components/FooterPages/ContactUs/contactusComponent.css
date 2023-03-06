@@ -1,0 +1,138 @@
+body {
+    background-color: var(--color-lightest);
+}
+
+.devprofile-container {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 2000px;
+  height: 100%;
+  margin-top: 50px;
+}
+
+.divprofile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    height: 100%;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.devprofile-pic {
+  max-width: 200px;
+  height: 200px;
+  min-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
+  border-radius: 50%;
+  object-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 0px;
+  margin-bottom: auto;
+}
+
+.devprofile-pic .dev-name {
+  font-weight: 700;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.dev-links .link-icon {
+  /* display: flex; */
+  display: inline-block;
+  align-items: center;
+  /* align-content: center; */
+  margin: 0 auto;
+  padding: 0;
+  max-width: 2000px;
+  height: 100%;
+  text-align: center;
+}
+
+.dev-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0;
+    max-width: 2000px;
+    color: var(--color-darker);
+}
+
+
+.dev-links{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding: 0;
+    max-width: 2000px;
+    height: 100%;
+
+}
+
+.dev-links a {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none; ;
+    color: var(--color-middle);
+    padding: 0;
+    max-width: 2000px;
+    height: 100%;
+    margin-right: 10px;
+    /* display: none; */
+    padding-right: 15px;
+
+}
+
+/* a p:before {
+    content:"• ";
+} */
+/* 
+.devprofile-card:hover .dev-links:hover a {
+    display: show;
+} */
+
+
+.contactus-header {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 0;
+    max-width: 2000px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .devprofile-container {
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+  
+@media screen and (max-width: 768px) {
+    .devprofile-container {
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+    .devprofile-container {
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
