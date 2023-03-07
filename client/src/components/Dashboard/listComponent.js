@@ -68,12 +68,12 @@ const ListComponent = () => {
         <div>
             <h1>My Lists</h1>
             <div>
-                <h2>{userData.lists[0].listName}</h2>
+                {/* <h2>{userData.lists[0].listName}</h2>
                 <ul>
                     {userData.lists[0].listItems.map((item) => (
                         <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
                     ))}
-                </ul>
+                </ul> */}
                 {/* <input type="text" value={newItem} onChange={handleNewItem} />
                 <button onClick={handleAddItem}>Add Item</button> */}
             </div>
