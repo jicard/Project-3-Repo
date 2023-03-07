@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../../utils/queries';
-import { ADD_LIST, ADD_ITEM, REMOVE_LIST } from '../../utils/mutations';
+// import { useQuery, useMutation } from '@apollo/client';
+// import { QUERY_USER, QUERY_ME } from '../../utils/queries';
+// import { ADD_LIST, ADD_ITEM, REMOVE_LIST } from '../../utils/mutations';
 
 const ListComponent = () => {
-    const [newItem, setNewItem] = useState("");
-    const [items, setItems] = useState([]);
+    // const [newItem, setNewItem] = useState("");
+    // const [items, setItems] = useState([]);
     // const [addList] = useMutation(ADD_LIST);
     // const [removeList] = useMutation(REMOVE_LIST);
-    const [addItem] = useMutation(ADD_ITEM);
-    const { loading, data } = useQuery(QUERY_USER);
-    const userData = data?.user || {};
+    // const [addItem] = useMutation(ADD_ITEM);
+    // const { loading, data } = useQuery(QUERY_USER);
+    // const userData = data?.user || {};
 
-    const handleNewItem = (e) => {
+    // const handleNewItem = (e) => {
 
-        setNewItem(e.target.value);
+    //     setNewItem(e.target.value);
 
-    }
+    // }
 
-    const handleAddItem = () => {
-        addItem({
-            variables: {
-                itemName: newItem,
-                itemUser: userData._id,
-                listId: userData.lists[0]._id,
-            }
+    // const handleAddItem = () => {
+    //     addItem({
+    //         variables: {
+    //             itemName: newItem,
+    //             itemUser: userData._id,
+    //             listId: userData.lists[0]._id,
+    //         }
 
-        })
+    //     })
 
-        setItems([...items, newItem]);
-        setNewItem("");
-    }
+    //     setItems([...items, newItem]);
+    //     setNewItem("");
+    // }
 
     // const handleAddList = () => {
     //     addList({
@@ -59,10 +59,10 @@ const ListComponent = () => {
 
 
 
-    if (loading) {
-        return <div>Loading...</div>;
+    // if (loading) {
+    //     return <div>Loading...</div>;
 
-    }
+    // }
 
     return (
         <div>
@@ -74,8 +74,8 @@ const ListComponent = () => {
                         <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
                     ))}
                 </ul>
-                <input type="text" value={newItem} onChange={handleNewItem} />
-                <button onClick={handleAddItem}>Add Item</button>
+                {/* <input type="text" value={newItem} onChange={handleNewItem} />
+                <button onClick={handleAddItem}>Add Item</button> */}
             </div>
         </div>
     )
