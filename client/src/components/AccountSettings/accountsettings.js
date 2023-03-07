@@ -18,24 +18,24 @@ const accountsettings = () => {
         <text>date need to move out by</text>
 
         <div className='account-btns'>
-            <Button
-                className='btns'
-                buttonStyle='btn--outline'
-                buttonSize='btn--large'
-            >
-                Edit
-            </Button>
-            <Button
-                className='btns'
-                buttonStyle='btn--primary'
-                buttonSize='btn--large'
-                onClick={console.log('loginclick!')}
-                >
-            Save 
-            </Button>
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+          >
+            Edit
+          </Button>
+          <Button
+            className='btns'
+            buttonStyle='btn--primary'
+            buttonSize='btn--large'
+            onClick={console.log('loginclick!')}
+          >
+            Save
+          </Button>
         </div>
       </div>
-      <div className= 'account-settings'>
+      <div className='account-settings'>
         <h1>Account Settings</h1>
         <h3>name</h3>
         <text>name here</text>
@@ -45,22 +45,21 @@ const accountsettings = () => {
         <text>password here</text>
 
         <div className='account-btns'>
-
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          Edit
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('loginclick!')}
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
           >
-            Save 
-        </Button>
+            Edit
+          </Button>
+          <Button
+            className='btns'
+            buttonStyle='btn--primary'
+            buttonSize='btn--large'
+            onClick={console.log('loginclick!')}
+          >
+            Save
+          </Button>
         </div>
 
       </div>

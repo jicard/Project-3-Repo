@@ -1,16 +1,11 @@
 import React from 'react';
-import {
-    Bars, Nav, NavBtn,
-    NavBtnLink, NavLink, NavMenu
-} from './NavbarElements';
+import { Nav, NavLink, NavMenu } from './NavbarElements';
 
 const AppNavbar = () => {
 
     return (
         <>
             <Nav>
-                <Bars />
-
                 <NavMenu>
                     <NavLink to='/' activestyle="true">
                         Homepage
@@ -25,8 +20,6 @@ const AppNavbar = () => {
                     <NavLink to='/settings' activestyle="true">
                         Account Settings
                     </NavLink>
-                    {/* Second Nav */}
-                    {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
                 </NavMenu>
             </Nav>
             
