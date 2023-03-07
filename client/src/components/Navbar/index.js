@@ -1,28 +1,25 @@
 import React from 'react';
-import {
-    Bars, Nav, NavBtn,
-    NavBtnLink, NavLink, NavMenu
-} from './NavbarElements';
+import { Nav, NavLink, NavMenu } from './NavbarElements';
 
 const AppNavbar = () => {
 
     return (
         <>
             <Nav>
-                <Bars />
-
                 <NavMenu>
-                    <NavLink to='/about' activestyle="true">
-                        About
-                    </NavLink>
                     <NavLink to='/' activestyle="true">
                         Homepage
                     </NavLink>
-                    <NavLink to='/lists' activestyle="true">
-                        List Button
+                    {/* We can implement this if we put a contact for on the "ContactusPage" */}
+                    {/* <NavLink to='/about-us' activestyle="true">
+                        About
+                    </NavLink> */}
+                    <NavLink to='/dashboard' activestyle="true">
+                        Dashboard
                     </NavLink>
-                    {/* Second Nav */}
-                    {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
+                    <NavLink to='/settings' activestyle="true">
+                        Account Settings
+                    </NavLink>
                 </NavMenu>
             </Nav>
             

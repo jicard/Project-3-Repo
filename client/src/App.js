@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'react-router';
 import WelcomePage from './components/WelcomePage/welcomepage'
-import AccountSettings from './components/AccountSettings/accountsettings'
-import List from './components/list/index'
-import TheFooter from './components/Footer/index'
+import SettingsPage from './components/AccountSettings/accountsettings'
+import TheFooter from './components/footer/index'
 import Navbar from './components/Navbar'
 import About from './components/NavbarPages/about'
-import ContactUs from './components/FooterPages/ContactUs/contactUs'
+import ContactUsPage from './components/FooterPages/ContactUs/index'
+import DashboardPage from './components/Dashboard/index';
 
 
 function App() {
@@ -17,8 +17,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<WelcomePage />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/aboutus' element={<ContactUs/>} />
+        {/* <Route path='/about' element={<About />} /> */}
+        <Route path='/about-us' element={<ContactUsPage/>} />
+        <Route path='/dashboard' element={<DashboardPage/>} />
+        <Route path='/settings' element={<SettingsPage/>} />
       </Routes>
       <TheFooter />
     </Router>

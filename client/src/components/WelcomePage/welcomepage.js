@@ -31,11 +31,8 @@ const WelcomePage = () => {
   Add Address (Current + Destination) + Move-in Date (?) */
   const [signupFormState, setSignupFormState] = useState({
     email: '',
-    firstName: '',
-    lastName: '',
-    addressFrom: '',
-    addressTo: '',
-    moveDate: ''
+    username: '',
+    password: ''
   })
 
   const [loginFormState, setLoginFormState] = useState({
@@ -107,25 +104,13 @@ const WelcomePage = () => {
                     value={signupFormState.email || ''}
                     onChange={handleSignupFormChange}
                     required />
-                  <Form.Label>First Name</Form.Label>
-                  <Form.Control name='firstName'
-                    value={signupFormState.firstName || ''}
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control name='username'
+                    value={signupFormState.username || ''}
                     onChange={handleSignupFormChange}  required />
-                  <Form.Label>Last Name</Form.Label>
-                  <Form.Control name='lastName'
-                    value={signupFormState.lastName || ''}
-                    onChange={handleSignupFormChange}  required />
-                  <Form.Label>Current Address</Form.Label>
-                  <Form.Control name='addressFrom'
-                    value={signupFormState.addressFrom || ''}
-                    onChange={handleSignupFormChange}  required />
-                  <Form.Label>New Address</Form.Label>
-                  <Form.Control name='addressTo'
-                    value={signupFormState.addressTo || ''}
-                    onChange={handleSignupFormChange}  required />
-                  <Form.Label>Moving Date</Form.Label>
-                  <Form.Control name='moveDate'
-                    value={signupFormState.moveDate || ''}
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control name='password'
+                    value={signupFormState.password || ''}
                     onChange={handleSignupFormChange}  required />
                 </Form.Group>
               </Modal.Body>
