@@ -85,7 +85,7 @@ const WelcomePage = () => {
           <p>Let us help ease the transition!</p>
           <div className='hero-btns'>
             <Button variant="primary" onClick={handleShow}>
-              GET STARTED
+              Sign Up
             </Button>
 
             <Modal
