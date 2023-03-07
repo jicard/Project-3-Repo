@@ -23,9 +23,9 @@ const DevProfiles = () => {
       id: 2,
       Name: "Josh Icard",
       img: joshIcard,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      Portfolio: "https://www.github.com/jicard",
+      GitHub: "https://www.github.com/jicard",
+      LinkedIn: "https://www.linkedin.com/in/joshicard/",
     },
     {
       id: 3,
