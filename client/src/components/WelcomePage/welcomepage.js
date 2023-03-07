@@ -10,7 +10,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { useMutation } from '@apollo/client';
 import { ADD_USER, LOGIN_USER } from '../../utils/mutations'
-import TheFooter from '../footer/index'
+import TheFooter from '../Footer/index'
 import AppNavbar from '../Navbar'
 import { Nav } from '../Navbar/NavbarElements';
 
@@ -83,6 +83,7 @@ const WelcomePage = () => {
     <>
       <div className='homepage-container'>
         <div className='main-info'>
+          <div className='text-area-1'>
           <h1>Moving?</h1>
           <p>Let us help ease the transition!</p>
           <div className='hero-btns'>
@@ -176,10 +177,15 @@ const WelcomePage = () => {
               </Modal.Footer>
             </Modal>
           </div>
+          </div>
+          <div className='image'>
           <img src={GIF} alt="Moving Truck" />
         </div>
+        </div>
         <div className='sub-section'>
+          <div className='checkimage'>
           <img src={checklist} alt='checklist' />
+          </div>
           <div className='text-box'>
             <h5>Designed with the Hardest Moves in Mind</h5>
             <p>Moving is never easy, no matter how many times you've moved. With <strong>GET MOVING</strong> we are here to help keep your mind at ease. With our pre-templated checklist, we help check the boxes as your moving date gets closer.</p>

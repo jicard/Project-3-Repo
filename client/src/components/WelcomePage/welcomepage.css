@@ -10,42 +10,48 @@
   }
 
   .main-info {
-    min-height: 29vw;
-    max-width: 79vw;
-
+    min-height: 6vw;
+    max-width: 99vw;
+    display: grid;
+    margin: 2vw;
+    grid-template-columns: 484px auto;
+    grid-gap: 10px;
   }
 
-  .main-info >img {
+.text-area-1 {
+  float: left;
+  margin-right: 6vw;
+}
+
+  .image >img {
     border-radius: 307px 5px 3px;
-    position: relevant;
-    top: 189px;
-    left: 60vw;
     max-width: 28vw;
     min-height: 21vw;
+    margin-top: 2vw;
   }
 
-  .main-info > h1 {
+  .text-area-1 > h1 {
     color: #fff;
     font-size: 100px;
     margin-top: 64px;
     margin-bottom: 2vw;
-    margin-left: 8vw;
+    margin-right: 4vw;
   }
   
-  .main-info > p {
+  .text-area-1 > p {
     margin-top: 8px;
     color: #000;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 7vw;
   }
   
 .sub-section {
   background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
   /* height: 23vw; */
   /* padding: 0vw 16vw; */
-  display: flex;
+  display: grid;
   width: 65%;
+  grid-template-columns: auto 219px;
 }
 
 
@@ -56,11 +62,14 @@
 }
 .text-box {
   width: 25vw;
-  margin-top: 3vw;
-  padding-left: 8vw;
-  height: 15vw;
+  margin-top: 1vw;
+  height: 22vw;
   text-align: center;
   font-size: 130%;
+  float: left;
+  left: -11vw;
+  position: relative;
+  top: 2vw;
 }
 
  h2 {
@@ -80,7 +89,6 @@ h5 {
 
   .hero-btns {
     margin-top: 1vw;
-    left: 10vw;
     position: relative;
   }
   

@@ -5,7 +5,7 @@ import 'react-router';
 import WelcomePage from './components/WelcomePage/welcomepage'
 import AccountSettings from './components/AccountSettings/accountsettings'
 import List from './components/list/index'
-import TheFooter from './components/footer/index'
+import TheFooter from './components/Footer/index'
 import Navbar from './components/Navbar'
 import About from './components/NavbarPages/about'
 import ContactUs from './components/FooterPages/ContactUs/contactUs'
