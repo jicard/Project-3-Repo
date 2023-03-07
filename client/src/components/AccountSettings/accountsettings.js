@@ -7,15 +7,15 @@ const accountsettings = () => {
 
     <div className='homepage-container'>
       <div className='moving-details'>
-        <h1>Moving details</h1>
-        <h3>New address</h3>
+        <h1>Moving Details</h1>
+        <h3>New Address:</h3>
         <text>New address here</text>
         <h3>Move-in Date:</h3>
-        <text>move-in date here</text>
-        <h3>Old Residence</h3>
-        <text>old address here</text>
+        <text>Move-in date here</text>
+        <h3>Old Residence:</h3>
+        <text>Old address here</text>
         <h3>Move Out Date:</h3>
-        <text>date need to move out by</text>
+        <text>Date need to move out by</text>
 
         <div className='account-btns'>
           <Button
@@ -37,12 +37,12 @@ const accountsettings = () => {
       </div>
       <div className='account-settings'>
         <h1>Account Settings</h1>
-        <h3>name</h3>
-        <text>name here</text>
-        <h3>email</h3>
-        <text>emailhere</text>
-        <h3>password</h3>
-        <text>password here</text>
+        <h3>Name:</h3>
+        <text>Name here</text>
+        <h3>Email:</h3>
+        <text>Email here</text>
+        <h3>Password</h3>
+        <text>Password here</text>
 
         <div className='account-btns'>
           <Button
