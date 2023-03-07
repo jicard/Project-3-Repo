@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Button from '../Button/Button';
 import './accountsettings.css';
 
@@ -9,13 +9,13 @@ const accountsettings = () => {
       <div className='moving-details'>
         <h1>Moving Details</h1>
         <h3>New Address:</h3>
-        <text>New address here</text>
+        <h6>New address here</h6>
         <h3>Move-in Date:</h3>
-        <text>Move-in date here</text>
+        <h6>Move-in date here</h6>
         <h3>Old Residence:</h3>
-        <text>Old address here</text>
+        <h6>Old address here</h6>
         <h3>Move Out Date:</h3>
-        <text>Date need to move out by</text>
+        <h6>Date need to move out by</h6>
 
         <div className='account-btns'>
           <Button
@@ -38,11 +38,11 @@ const accountsettings = () => {
       <div className='account-settings'>
         <h1>Account Settings</h1>
         <h3>Name:</h3>
-        <text>Name here</text>
+        <h6>Name here</h6>
         <h3>Email:</h3>
-        <text>Email here</text>
+        <h6>Email here</h6>
         <h3>Password</h3>
-        <text>Password here</text>
+        <h6>Password here</h6>
 
         <div className='account-btns'>
           <Button
