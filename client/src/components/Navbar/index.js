@@ -12,14 +12,18 @@ const AppNavbar = () => {
                 <Bars />
 
                 <NavMenu>
-                    <NavLink to='/about' activestyle="true">
-                        About
-                    </NavLink>
                     <NavLink to='/' activestyle="true">
                         Homepage
                     </NavLink>
-                    <NavLink to='/lists' activestyle="true">
-                        List Button
+                    {/* We can implement this if we put a contact for on the "ContactusPage" */}
+                    {/* <NavLink to='/about-us' activestyle="true">
+                        About
+                    </NavLink> */}
+                    <NavLink to='/dashboard' activestyle="true">
+                        Dashboard
+                    </NavLink>
+                    <NavLink to='/settings' activestyle="true">
+                        Account Settings
                     </NavLink>
                     {/* Second Nav */}
                     {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
