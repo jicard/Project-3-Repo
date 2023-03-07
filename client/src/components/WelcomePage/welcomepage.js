@@ -6,11 +6,15 @@ import React, { useState } from 'react'
 import './welcomepage.css';
 import GIF from '../../images/moving.gif'
 import checklist from '../../images/checklist.gif'
+import LoginSignupButton from '../Login/Button';
 
 const WelcomePage = () => {
 
   return (
     <>
+    <div className="login">
+    <LoginSignupButton />
+    </div>
       <div className='homepage-container'>
         <div className='main-info'>
           <div className='text-area-1'>
