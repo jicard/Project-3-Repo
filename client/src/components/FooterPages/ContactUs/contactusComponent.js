@@ -15,8 +15,8 @@ const DevProfiles = () => {
       id: 1,
       Name: "John Grant",
       img: johnGrant,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      Portfolio: "https://github.com/jgrant928",
+      GitHub: "https://github.com/jgrant928",
       LinkedIn: "https://www.linkedin.com",
     },
     {
@@ -31,8 +31,8 @@ const DevProfiles = () => {
       id: 3,
       Name: "Julia Johnson",
       img: juliaJohnson,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      Portfolio: "https://github.com/jjohnson673",
+      GitHub: "https://github.com/jjohnson673",
       LinkedIn: "https://www.linkedin.com",
     },
     {
@@ -40,15 +40,15 @@ const DevProfiles = () => {
       Name: "Mary Greenwood",
       img: maryGreenwood,
       Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      GitHub: "https://github.com/marysgreenwood",
       LinkedIn: "https://www.linkedin.com",
     },
     {
       id: 5,
       Name: "Michael Smitte",
       img: michaelSmitte,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      Portfolio: "https://github.com/Hochipochi",
+      GitHub: "https://github.com/Hochipochi",
       LinkedIn: "https://www.linkedin.com",
     },
     {
@@ -57,7 +57,7 @@ const DevProfiles = () => {
       img: shawnThomas,
       Portfolio: "https://shawncthomas.com",
       GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      LinkedIn: "www.linkedin.com/in/shawncthomas",
     },
   ]
 
@@ -74,17 +74,9 @@ const DevProfiles = () => {
                   style={{ backgroundImage: `url(${devprofile.img})` }}
                   key={`${devprofile.Name}-${devprofile.id}`}
                 ></div>
-                {/* <p className="dev-name"> */}
                 <div className="dev-name">
                   <p>{`${devprofile.Name}`}</p>
                 </div>
-                {/* </p> */}
-                {/* </div> */}
-                {/* <div className="dev-name">
-                <p className="dev-name">
-                  <h6>{`${devprofile.Name}`}</h6>
-                </p>
-              </div> */}
                 <div className="dev-links">
                   <a
                     href={devprofile.Portfolio}

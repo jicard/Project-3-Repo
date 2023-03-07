@@ -39,7 +39,7 @@ body {
   min-height: 200px;
   border-radius: 50%;
   object-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   margin: 0px;
@@ -128,7 +128,7 @@ body {
 @media screen and (max-width: 768px) {
     .devprofile-container {
         grid-template-columns: repeat(2, 1fr);
-  }
+  }   
 }
 
 @media screen and (max-width: 568px) {
