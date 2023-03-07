@@ -33,7 +33,8 @@ const LoginForm = () => {
         throw new Error("something went wrong!");
       }
 
-      Auth.login(data.login.token);
+      Auth.login(data.login.token)
+      alert("Thanks for logging in! Time to Get Moving!");
     } catch (err) {
       console.error(err);
       setShowAlert(true);

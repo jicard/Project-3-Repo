@@ -35,13 +35,15 @@ const SignupForm = () => {
       event.stopPropagation();
     }
     try {
-      const { data } = await addUser({ variables: { ...userFormData } });
+      const { data } = await addUser({ variables: { ...userFormData } })
+      ;
 
       if (!data) {
         throw new Error("something went wrong!");
       }
-
+      localStorage.removeItem("id_token")
       Auth.login(data.addUser.token)
+      alert('Thanks for signing up! Time to Get Moving!')
     } catch (err) {
       console.error(err);
       setShowAlert(true);
