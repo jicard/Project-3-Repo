@@ -6,7 +6,6 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    trim: true,
   },
   email: {
     type: String,
@@ -19,14 +18,14 @@ const userSchema = new Schema({
     required: true,
     minlength: 8,
   },
-
+/*
   currentAddress: String,
   destinationZip: String,
   movingDate: {
     //Date provided by user not from Date.now, method to get date from user input here, in server-side query, or in front-end?
     type: Date,
   },
-
+*/
   lists: [
     {
       type: Schema.Types.ObjectId,
@@ -35,7 +34,7 @@ const userSchema = new Schema({
   ],
 });
 
-userSchema.pre("save", async function (next) {
+userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
