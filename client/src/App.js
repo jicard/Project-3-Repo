@@ -4,7 +4,7 @@ import './App.css';
 import 'react-router';
 import WelcomePage from './components/WelcomePage/welcomepage'
 import SettingsPage from './components/AccountSettings/accountsettings'
-import TheFooter from './components/Footer/index'
+import TheFooter from './components/FooterEle/index'
 import Navbar from './components/Navbar'
 import About from './components/NavbarPages/about'
 import ContactUsPage from './components/FooterPages/ContactUs/index'
