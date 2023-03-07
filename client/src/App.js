@@ -42,7 +42,7 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
       <Navbar />
-      <LoginSignupButton />
+      {/*<LoginSignupButton />*/}
       <Routes>
         <Route path='/' element={<WelcomePage />} />
         {/* <Route path='/about' element={<About />} /> */}
