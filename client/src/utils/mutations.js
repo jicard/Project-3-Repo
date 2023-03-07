@@ -1,4 +1,3 @@
-/*
 import { gql } from "@apollo/client";
 //mutations
 export const LOGIN_USER = gql`
@@ -40,7 +39,7 @@ export const UPDATE_USER = gql`
       currentAddress: $currentAddress
       destinationAddress: $destinationAddress
       movingDate: $movingDate
-    ) {
+    ) 
       username
       email
       password
@@ -48,7 +47,6 @@ export const UPDATE_USER = gql`
       destinationAddress
       movingDate
     }
-  }
 `;
 
 export const ADD_LIST = gql`
@@ -57,11 +55,11 @@ mutation addList($listName: String!) {
     _id
     listName
     listUser
-    listItems: {
+    listItems: 
       _id
       itemName
       itemNotes
-    }
+    
   }
 }
 `;
@@ -72,11 +70,11 @@ export const ADD_LIST_ITEM = gql`
       _id
       listName
       listUser
-      listItems: {
+      listItems: 
         _id
         itemName
         itemNotes
-      }
+      
     }
   }
 `;
@@ -87,11 +85,11 @@ export const UPDATE_LIST_ITEM = gql`
       _id
       listName
       listUser
-      listItems: {
+      listItems: 
         _id
         itemName
         itemNotes
-      }
+      
     }
   }
 `;
@@ -102,11 +100,11 @@ mutation removeList($listId: ID!) {
     _id
     listName
     listUser
-    listItems: {
+    listItems: 
       _id
       itemName
       itemNotes
-    }
+    
   }
 }
 `;
@@ -117,12 +115,11 @@ mutation removeListITEM($listId: ID!, $listItemId: ID!) {
     _id
     listName
     listUser
-    listItems: {
+    listItems: 
       _id
       itemName
       itemNotes
-    }
+    
   }
 }
 `;
-*/

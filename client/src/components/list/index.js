@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER, QUERY_ME } from '../../utils/queries';
-import { ADD_LIST, ADD_ITEM, REMOVE_LIST } from '../../utils/mutations';
+import { GET_ME } from '../../utils/queries';
+import { ADD_LIST, ADD_LIST_ITEM, UPDATE_LIST_ITEM, REMOVE_LIST, REMOVE_LIST_ITEM } from '../../utils/mutations';
 
 const ListComponent = () => {
     const [newItem, setNewItem] = useState("");
     const [items, setItems] = useState([]);
     // const [addList] = useMutation(ADD_LIST);
     // const [removeList] = useMutation(REMOVE_LIST);
-    const [addItem] = useMutation(ADD_ITEM);
-    const { loading, data } = useQuery(QUERY_USER);
+    const [addItem] = useMutation(ADD_LIST_ITEM);
+    const { loading, data } = useQuery(GET_ME);
     const userData = data?.user || {};
 
     const handleNewItem = (e) => {
