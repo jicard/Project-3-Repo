@@ -7,10 +7,6 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    password: String!
-    currentAddress: String
-    destinationAddress: String
-    movingDate: String
     lists: [Lists]
   }
 
@@ -41,7 +37,6 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: User
     me: User
   }
 
