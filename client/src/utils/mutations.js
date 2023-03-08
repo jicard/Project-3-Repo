@@ -51,16 +51,21 @@ export const UPDATE_USER = gql`
 `;
 
 export const ADD_LIST = gql`
-mutation addList($listName: String!) {
-  addList(listName: $listName) {
+mutation addList(
+  $listTitle: String
+  $listContent: String
+  ) {
+  addList(
+    listTitle: $listTitle
+    listContent: $listContent
+  ) {
     _id
-    listName
-    listUser
-    listItems: 
-      _id
-      itemName
-      itemNotes
-    
+    username
+    email
+    lists {
+      listTitle
+      listContent
+    }
   }
 }
 `;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, NavLink, NavMenu } from './NavbarElements';
+import logo from '../../images/logo.png'
 
 const AppNavbar = () => {
 
@@ -7,6 +8,7 @@ const AppNavbar = () => {
         <>
             <Nav>
                 <NavMenu>
+                    <img src={logo} alt="Get Moving Logo" />
                     <NavLink to='/' activestyle="true">
                         Homepage
                     </NavLink>
