@@ -112,6 +112,7 @@
     margin-left: 55px;
     text-align: center;
     margin-top: 20px;
+    
     ;
   }
   .sub-section{
@@ -119,6 +120,7 @@
     height: 50vh;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 20px;
   }
   .main-text-area , .truck-image {
     width: 100%;
