@@ -31,9 +31,9 @@ const DevProfiles = () => {
       id: 3,
       Name: "Julia Johnson",
       img: juliaJohnson,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      Portfolio: "https://jjohnson673.github.io/Portfolio_2.0/",
+      GitHub: "https://github.com/jjohnson673",
+      LinkedIn: "https://www.linkedin.com/in/julia--johnson/",
     },
     {
       id: 4,
