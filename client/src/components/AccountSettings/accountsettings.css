@@ -55,6 +55,7 @@ h3 {
     position: relative;
     justify-content: center;
     display: inline-flex;
+    width: 100%;
   }
   
   .account-btns .btn {
