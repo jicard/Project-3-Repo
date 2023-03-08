@@ -57,7 +57,7 @@ const DevProfiles = () => {
       img: shawnThomas,
       Portfolio: "https://shawncthomas.com",
       GitHub: "https://www.github.com/",
-      LinkedIn: "www.linkedin.com/in/shawncthomas",
+      LinkedIn: "https://www.linkedin.com/in/shawncthomas",
     },
   ]
 

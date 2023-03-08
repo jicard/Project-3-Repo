@@ -75,8 +75,6 @@
 }
 
 .text-box {
-  left: 26vw;
-  top: -19vw;
   position: relative;
 }
 
@@ -89,6 +87,19 @@
   color: #213e78;
 }
 
+.login {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .text-box {
+    left: 26vw;
+    top: -19vw;
+    position: relative;
+  }
+}
 
 @media screen and (max-width: 960px) {
   .homepage-container>h1 {
@@ -160,8 +171,13 @@
   }
 }
 
-.login {
-  width: 100%;
-  position: absolute;
-  text-align: right;
+@media screen and (max-width: 768px) {
+  .sub-section {
+  width: 80%;
+  height: 55vh;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 15px;
+  }
+
 }
