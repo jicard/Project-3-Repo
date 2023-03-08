@@ -7,7 +7,7 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    lists: [Lists]
+    lists: [List]
   }
 
   input ListItemInput {
@@ -16,11 +16,10 @@ const typeDefs = gql`
     itemNotes: String
   }
 
-  type Lists {
+  type List {
     _id: ID!
-    listName: String!
-    listUser: String!
-    listItems: [ListItem]
+    listTitle: String!
+    listContent: String!
   }
 
   type ListItem {
@@ -44,11 +43,11 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     setUserInfo (username: String, email: String, password: String, currentAddress: String, destinationAddress: String, movingDate: String): User
-    addList(listName: String!): Lists
-    addListItem(input: ListItemInput): Lists
-    updateListItem(id: ID!, input: ListItemInput): Lists
-    removeList(listId: ID!): Lists
-    removeListItem(listId: ID!, listItemId: ID!): Lists
+    addList(listTitle: String!, listContent: String!): List
+    addListItem(input: ListItemInput): List
+    updateListItem(id: ID!, input: ListItemInput): List
+    removeList(listId: ID!): List
+    removeListItem(listId: ID!, listItemId: ID!): List
   }
 `;
 
