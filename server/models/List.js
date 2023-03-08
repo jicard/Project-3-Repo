@@ -1,32 +1,32 @@
 const { Schema, model } = require("mongoose");
 
-const listsSchema = new Schema(
+const listSchema = new Schema(
   {
-    listName: {
+    listTitle: {
       type: String,
       required: true,
-      trim: true,
+      trim: true
     },
-
+    /*
     listUser: {
       type: String,
       required: true,
       trim: true,
     },
-    listItems: [
-      {
-        itemName: String,
-        itemNotes: String,
-      },
-    ],
+    */
+    listContent: {
+      type: String,
+      required: true,
+      trim: true
+    }
   }
 
   
 );
 
-const Lists = model("Lists", listsSchema);
+const List = model("List", listSchema);
 
-module.exports = Lists;
+module.exports = List;
 
 //more detailed Lists fields
 // packingList: [

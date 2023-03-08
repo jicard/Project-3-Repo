@@ -1,12 +1,12 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Lists } = require("../models");
+const { User, List } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("lists");
+        return User.findOne({ _id: context.user._id }).populate("list");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -70,20 +70,23 @@ const resolvers = {
     },
 
     //addList--takes listName, creates list and pushes to current User's array of lists
-    addList: async (parent, { listName }, context) => {
+    addList: async (parent, { listTitle, listContent }, context) => {
+      console.log(context);
       if (context.user) {
-        const list = await Lists.create({
-          listName,
+        const list = await List.create({
+          listTitle,
           listUser: context.user.username,
+          listContent
         });
-        await User.findOneAndUpdate(
+        return User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { lists: list._id } }
-        );
-
-        return list;
-      }
+          { $addToSet: {list: [list]}
+          }
+          );
+      } 
+      else {
       throw new AuthenticationError("You need to be logged in!");
+      }
     },
 
     //addListItem--takes listName, itemName and itemNotes, creates list item and pushes to list

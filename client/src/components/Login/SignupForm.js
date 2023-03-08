@@ -44,6 +44,7 @@ const SignupForm = () => {
       localStorage.removeItem("id_token")
       Auth.login(data.addUser.token)
       alert('Thanks for signing up! Time to Get Moving!')
+      
     } catch (err) {
       console.error(err);
       setShowAlert(true);

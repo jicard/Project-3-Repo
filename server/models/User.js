@@ -26,10 +26,10 @@ const userSchema = new Schema({
     type: Date,
   },
 */
-  lists: [
+  list: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Lists",
+      ref: "List",
     },
   ],
 });
