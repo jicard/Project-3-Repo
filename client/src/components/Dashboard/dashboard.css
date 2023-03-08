@@ -9,3 +9,7 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+.dashboard-container {
+    height: 87vh;
+}

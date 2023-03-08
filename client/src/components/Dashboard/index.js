@@ -4,7 +4,9 @@ import ListComponent from './listComponent';
 
 const DashboardPage = () => {
 return (
+    <div className='dashboard-container'>
         <ListComponent />
+    </div>
     );
 };
 
