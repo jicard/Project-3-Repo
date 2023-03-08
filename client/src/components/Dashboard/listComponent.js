@@ -30,6 +30,11 @@ Running the addList mutation in sandbox works correctly
 -so far userFormData contains the two things we needed to get sandbox to work
       -but we're getting a 400 error in console after clicking submit
 
+-List creation works on backend
+-List creation does not work from frontend
+-Next step is generate list on page by destructuring current user
+      -username.lists.[0]
+
 */
     const handleFormSubmit = async (event) => {
         event.preventDefault();
