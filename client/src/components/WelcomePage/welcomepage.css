@@ -1,117 +1,167 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
- 
- 
- .homepage-container {
-      max-width: 100vw;    
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-      font-family: 'Baloo Paaji 2', cursive;
-      background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
+
+
+.homepage-container {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  font-family: 'Baloo Paaji 2', cursive;
+  background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
 }
 
-   .headliner { 
-      margin: 3vw;
-    }
+.headliner {
+  margin: 3vw;
+}
 
-  .text-area-1 {
-    float: left;
-    margin-right: 6vw;
-  }
-
-
-  .truck-image {
-    display: flex;
-    flex-direction: column;
-
-  }
+.text-area-1 {
+  float: left;
+  margin-right: 6vw;
+}
 
 
-    .truck-image >img {
-      border-radius: 307px 5px 3px;
-      max-width: 28vw;
-      min-height: 21vw;
-      margin-top: 3vw;
-    }
+.truck-image {
+  display: flex;
+  flex-direction: column;
 
-    .main-text-area > h2 {
-      color: #fff;
-      font-size: 100px;
-      margin-top: 64px;
-      margin-bottom: 2vw;
-      font-family: 'Baloo Paaji 2', cursive;
-    }
-    
-    .main-text-area > p {
-      margin-top: 8px;
-      color: #000;
-      font-size: 32px;
-      font-family: 'Baloo Paaji 2', cursive;
-      text-align: center;
-      
-    }
+}
 
 
-    
- .sub-section {
-    background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
-    min-height: 26vw;
-    padding: 0vw 15vw;
-    display: inline-block;
-    max-width: 75%;
-    border-radius: 8px;
-    height: 26vw;
+.truck-image>img {
+  border-radius: 307px 5px 3px;
+  max-width: 28vw;
+  min-height: 21vw;
+  margin-top: 3vw;
+}
+
+.main-text-area>h2 {
+  color: #fff;
+  font-size: 100px;
+  margin-top: 64px;
+  margin-bottom: 2vw;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+.main-text-area>p {
+  margin-top: 8px;
+  color: #000;
+  font-size: 32px;
+  font-family: 'Baloo Paaji 2', cursive;
+  text-align: center;
+
 }
 
 
 
- .check-image > img {
+.sub-section {
+  background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
+  min-height: 26vw;
+  padding: 0vw 15vw;
+  display: inline-block;
+  max-width: 78%;
+  border-radius: 8px;
+  height: 26vw;
+}
+
+
+
+.check-image>img {
   margin-top: 3vw;
   min-height: 19vw;
   left: -14vw;
   position: relative;
 }
 
+.text-box {
+  /* left: 26vw;
+  top: -19vw; */
+  position: relative;
+}
+
+
+.text-box>h5 {
+  font-size: 15px;
+}
+
+.text-box>p {
+  color: #213e78;
+}
+
+
+@media screen and (max-width: 960px) {
+  .homepage-container>h1 {
+    text-align: center;
+  }
   .text-box {
-    left: 26vw;
-    top: -19vw;
-    position: relative;
-  }
-
-
-.text-box > h5 {
-    font-size: 130%;
-    display: flex;
-  }
-
-  .text-box > p {
-    color: #213e78;
-  }
-
-
-    /* @media screen and (max-width: 960px) {
-      .homepage-container > h1 {
-        font-size: 70px;
-        margin-top: -160px;
-      }
-    }
-    
-    @media screen and (max-width: 768px) {
-      .homepage-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
-      }
-    
-      .homepage-container > p {
-        font-size: 30px;
-      }
-      
-    }   */
-
-  .login {
-    width: 100%;
+    /* left: 26vw;
+    top: -19vw; */
     position: absolute;
-    text-align: right;
+    margin-left: 55px;
+    text-align: center;
+    margin-top: 20px;
+    ;
   }
+  .sub-section{
+    width: 80%;
+    height: 50vh;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-text-area , .truck-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #checklist-gif{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    left: 0;
+
+  }
+.headliner {
+  margin: 3vw;
+  font-size: 30px;
+}
+.check-image{
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+
+}
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-container>h1 {
+
+
+  }
+
+  .homepage-container>p {
+
+  }
+  .truck-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #checklist-gif{
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+}
+
+.login {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+}

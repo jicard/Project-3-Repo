@@ -31,7 +31,7 @@ const WelcomePage = () => {
 
         <Row className='sub-section'>
           <Col xs={12} md={6} className='check-image'>
-          <img src={checklist} alt='checklist' />
+          <img id='checklist-gif' src={checklist} alt='checklist' />
           </Col>
           <Col xs={6} md={8} className='text-box'>
             <h5>Designed with the Hardest Moves in Mind</h5>
