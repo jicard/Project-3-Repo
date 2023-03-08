@@ -41,7 +41,7 @@ const DevProfiles = () => {
       img: maryGreenwood,
       Portfolio: "https://github.com/marysgreenwood",
       GitHub: "https://github.com/marysgreenwood",
-      LinkedIn: "https://www.linkedin.com",
+      LinkedIn: "https://www.linkedin.com/in/mary-greenwood-30b88450/",
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ const DevProfiles = () => {
       GitHub: "https://www.github.com/",
       LinkedIn: "https://www.linkedin.com/in/shawncthomas",
     },
-  ]
+  ];
 
   return (
     <div className="contactus-container">
@@ -110,7 +110,6 @@ const DevProfiles = () => {
       </div>
     </div>
   );
-}
+};
 
 export default DevProfiles;
-
