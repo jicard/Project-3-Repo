@@ -39,7 +39,7 @@ const DevProfiles = () => {
       id: 4,
       Name: "Mary Greenwood",
       img: maryGreenwood,
-      Portfolio: "https://github.com/marysgreenwood"",
+      Portfolio: "https://github.com/marysgreenwood",
       GitHub: "https://github.com/marysgreenwood",
       LinkedIn: "https://www.linkedin.com",
     },
