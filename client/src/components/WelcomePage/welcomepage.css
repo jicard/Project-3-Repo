@@ -75,14 +75,14 @@
 }
 
 .text-box {
-  /* left: 26vw;
-  top: -19vw; */
+  left: 26vw;
+  top: -19vw;
   position: relative;
 }
 
 
 .text-box>h5 {
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .text-box>p {
