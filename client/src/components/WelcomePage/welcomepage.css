@@ -1,134 +1,117 @@
-  .homepage-container {
-    /* height: 100%;
-    width: 100%; */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+ 
+ 
+ .homepage-container {
+      max-width: 100vw;    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+      font-family: 'Baloo Paaji 2', cursive;
+      background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
+}
+
+   .headliner { 
+      margin: 3vw;
+    }
+
+  .text-area-1 {
+    float: left;
+    margin-right: 6vw;
+  }
+
+
+  .truck-image {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(to left bottom, #211b46, #282b5a, #2d3c6d, #324d81, #365f95, #4970a4, #5b81b4, #6e93c3, #8ea8d2, #adbee1, #cad5f0, #e6ecff);
+
   }
 
-  .main-info {
-    min-height: 6vw;
-    max-width: 99vw;
-    display: grid;
-    margin: 2vw;
-    grid-template-columns: 484px auto;
-    grid-gap: 10px;
-  }
 
-.text-area-1 {
-  float: left;
-  margin-right: 6vw;
-}
-
-  .image >img {
-    border-radius: 307px 5px 3px;
-    max-width: 28vw;
-    min-height: 21vw;
-    margin-top: 3vw;
-  }
-
-  .text-area-1 > h1 {
-    color: #fff;
-    font-size: 100px;
-    margin-top: 64px;
-    margin-bottom: 2vw;
-    margin-right: 4vw;
-  }
-  
-  .text-area-1 > p {
-    margin-top: 8px;
-    color: #000;
-    font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
-.sub-section {
-  background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
-  /* height: 23vw; */
-  /* padding: 0vw 16vw; */
-  display: grid;
-  width: 65%;
-  grid-template-columns: auto 219px;
-}
-
-
-.sub-section > img {
-  margin-top: 3vw;
-  height: 16vw;
-
-}
-.text-box {
-  width: 25vw;
-  margin-top: 1vw;
-  height: 22vw;
-  text-align: center;
-  font-size: 130%;
-  float: left;
-  left: -11vw;
-  position: relative;
-  top: 2vw;
-}
-
- h2 {
-  height: 5vw;
-  display: flex;
-  color: #213e78;
-}
-
-h5 {
-  font-size: 130%;
-  display: flex;
-}
-
-.text-box > p {
-  color: #213e78;
-}
-
-  .hero-btns {
-    margin-top: 1vw;
-    position: relative;
-  }
-  
-  .hero-btns .btn {
-    margin: 6px;
-  }
-
-  @media screen and (max-width: 960px) {
-    .homepage-container > h1 {
-      font-size: 70px;
-      margin-top: -160px;
+    .truck-image >img {
+      border-radius: 307px 5px 3px;
+      max-width: 28vw;
+      min-height: 21vw;
+      margin-top: 3vw;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .homepage-container > h1 {
-      font-size: 50px;
-      margin-top: -100px;
-    }
-  
-    .homepage-container > p {
-      font-size: 30px;
+
+    .main-text-area > h2 {
+      color: #fff;
+      font-size: 100px;
+      margin-top: 64px;
+      margin-bottom: 2vw;
+      font-family: 'Baloo Paaji 2', cursive;
     }
     
-  
-    .btn-mobile {
-      display: block;
-      text-decoration: none;
+    .main-text-area > p {
+      margin-top: 8px;
+      color: #000;
+      font-size: 32px;
+      font-family: 'Baloo Paaji 2', cursive;
+      text-align: center;
+      
     }
-  
-    .btn {
-      width: 100%;
-    }
+
+
+    
+ .sub-section {
+    background-image: linear-gradient(to bottom, #ffffff, #fafaff, #f4f5ff, #eef0ff, #e6ecff);
+    min-height: 26vw;
+    padding: 0vw 15vw;
+    display: inline-block;
+    max-width: 75%;
+    border-radius: 8px;
+    height: 26vw;
+}
+
+
+
+ .check-image > img {
+  margin-top: 3vw;
+  min-height: 19vw;
+  left: -14vw;
+  position: relative;
+}
+
+  .text-box {
+    left: 26vw;
+    top: -19vw;
+    position: relative;
   }
+
+
+.text-box > h5 {
+    font-size: 130%;
+    display: flex;
+  }
+
+  .text-box > p {
+    color: #213e78;
+  }
+
+
+    /* @media screen and (max-width: 960px) {
+      .homepage-container > h1 {
+        font-size: 70px;
+        margin-top: -160px;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .homepage-container > h1 {
+        font-size: 50px;
+        margin-top: -100px;
+      }
+    
+      .homepage-container > p {
+        font-size: 30px;
+      }
+      
+    }   */
 
   .login {
     width: 100%;
     position: absolute;
     text-align: right;
   }
-
-
-
