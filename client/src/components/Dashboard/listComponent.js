@@ -87,10 +87,10 @@ const ListComponent = () => {
     // }
 
     //strikethrough list item on click
-    const handleStrikethrough = (e) => {
-       e.target.style.textDecoration = "line-through";
+    //const handleStrikethrough = (e) => {
+    //    e.target.style.textDecoration = "line-through";
         
-    }
+    //}
 
 
 
@@ -139,7 +139,7 @@ const ListComponent = () => {
                 <h2>{allListData.listTitle}</h2>
                 <ul>
                     {allListData.listContent.map((item) => (
-                        <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
+                        <li key={item._id}>{item.itemName}</li>
                     ))}
                 </ul>
 
