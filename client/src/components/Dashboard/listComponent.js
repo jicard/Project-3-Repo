@@ -87,10 +87,10 @@ const ListComponent = () => {
     // }
 
     //strikethrough list item on click
-    //const handleStrikethrough = (e) => {
-    //    e.target.style.textDecoration = "line-through";
+    const handleStrikethrough = (e) => {
+       e.target.style.textDecoration = "line-through";
         
-    //}
+    }
 
 
 
@@ -102,7 +102,7 @@ const ListComponent = () => {
     return (
         <>
         <div className="list">
-            <h1>My Lists</h1>
+            <h1>Create a List</h1>
         </div>
         <Form onSubmit={handleFormSubmit}>
             <Form.Group>
@@ -132,6 +132,21 @@ const ListComponent = () => {
                 Submit
             </Button>
         </Form>
+            
+{/* pull listTitle and listContent from database and display on dashboard */}
+
+            <div>
+                <h2>{allListData.listTitle}</h2>
+                <ul>
+                    {allListData.listContent.map((item) => (
+                        <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
+                    ))}
+                </ul>
+
+            </div>
+
+
+
             {/*<div>
                 <h2>{userData.lists[0].listName}</h2>
                 <ul>
