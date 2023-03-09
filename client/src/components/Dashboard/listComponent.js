@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useQuery, useMutation } from '@apollo/client';
+import React, { useState, useEffect } from 'react';
+import { useQuery, useMutation, gql } from '@apollo/client';
 import { Form, Button} from "react-bootstrap";
 import { GET_ME, ALL_LISTS } from '../../utils/queries';
 import { ADD_LIST, ADD_LIST_ITEM, REMOVE_LIST } from '../../utils/mutations';
@@ -28,33 +28,13 @@ const ListComponent = () => {
         const { name, value } = event.target;
         setUserFormData({ ...userFormData, [name]: value });
       };
-/* MICHAEL LOOK HERE
 
-Running the addList mutation in sandbox works correctly
--remember to switch to headers tab
-      -add in Authorization and "BEARER xxx"
-      -xxx = copy the token from localstorage once you log into the site
-
--can't figure out how to correctly setup front end request to send data to server
--so far userFormData contains the two things we needed to get sandbox to work
-      -but we're getting a 400 error in console after clicking submit
-
--List creation works on backend
--List creation does not work from frontend
--Next step is generate list on page by destructuring current user
-      -username.lists.[0]
-
-*/
-    const handleFormSubmit = async (event) => {
+    const handleFormSubmit = (event) => {
         event.preventDefault();
         console.log(userFormData);
-        try {
-            const data = await addList({ variables: {userFormData} })
-        }
-        catch (err) {
-            console.error(err)
-        }
-        };
+        addList({ variables: {listTitle: userFormData.listTitle, listContent: userFormData.listContent}})
+        alert('List added!')    
+    };
 
     
     //const [newItem, setNewItem] = useState("");
