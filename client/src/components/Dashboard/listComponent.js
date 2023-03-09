@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, gql } from '@apollo/client';
-import { Form, Button} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { GET_ME, ALL_LISTS } from '../../utils/queries';
 import { ADD_LIST, ADD_LIST_ITEM, REMOVE_LIST } from '../../utils/mutations';
 import './dashboard.css';
@@ -27,86 +27,24 @@ const ListComponent = () => {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setUserFormData({ ...userFormData, [name]: value });
-      };
+    };
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
         console.log(userFormData);
-        addList({ variables: {listTitle: userFormData.listTitle, listContent: userFormData.listContent}})
-        alert('List added!')    
+        addList({ variables: { listTitle: userFormData.listTitle, listContent: userFormData.listContent } })
+        alert('List added!')
     };
 
-    
-    //const [newItem, setNewItem] = useState("");
-    //const [items, setItems] = useState([]);
-    
-    //const [removeList] = useMutation(REMOVE_LIST);
-    //const [addItem] = useMutation(ADD_LIST_ITEM);
-    //const { loading, data } = useQuery(GET_ME);
-    //const userData = data?.user || {};
-/*
-    const handleNewItem = (e) => {
-
-         setNewItem(e.target.value);
-
-    }
-*/
-/*
-     const handleAddItem = () => {
-         addItem({
-             variables: {
-                 itemName: newItem,
-                 itemUser: userData._id,
-                 listId: userData.lists[0]._id,
-             }
-
-         })
-         */
-
-    //     setItems([...items, newItem]);
-    //     setNewItem("");
-    // }
-
-    // const handleAddList = () => {
-    //     addList({
-    //         variables: {
-    //             listName: "New List",
-    //             listUser: userData._id,
-    //         }
-    //     })
-
-
-    // }
-
-    // const handleRemoveList = (listId) => {
-    //     removeList({
-    //         variables: {
-    //             listId: listId,
-    //         }
-    //     })
-    // }
-
-    //strikethrough list item on click
-    //const handleStrikethrough = (e) => {
-    //    e.target.style.textDecoration = "line-through";
-        
-    //}
-
-
-
-    // if (loading) {
-    //     return <div>Loading...</div>;
-
-    // }
 
     return (
         <>
-        <div className="list">
-            <h1>Create a List</h1>
-        </div>
-        <Form onSubmit={handleFormSubmit}>
-            <Form.Group>
-                <Form.Label htmlFor="listTitle">List Title</Form.Label>
+            <div className="list">
+                <h1>Create a List</h1>
+            </div>
+            <Form onSubmit={handleFormSubmit}>
+                <Form.Group>
+                    <Form.Label htmlFor="listTitle">List Title</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="List Title"
@@ -114,9 +52,9 @@ const ListComponent = () => {
                         onChange={handleInputChange}
                         value={userFormData.listTitle}
                     />
-            </Form.Group>
-            <Form.Group>
-                <Form.Label htmlFor="listContent">List Content</Form.Label>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label htmlFor="listContent">List Content</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="List content"
@@ -124,26 +62,22 @@ const ListComponent = () => {
                         onChange={handleInputChange}
                         value={userFormData.listContent}
                     />
-            </Form.Group>
-            <Button
-                type="submit"
-                variant="success"
-            >
-                Submit
-            </Button>
-        </Form>
-            
-{/* pull listTitle and listContent from database and display on dashboard */}
+                </Form.Group>
+                <Button
+                    type="submit"
+                    variant="success"
+                >
+                    Submit
+                </Button>
+            </Form>
 
+            {/* pull listTitle and listContent from database and display on dashboard */}
+            {/* ----- FIX AFTER PRESENTATION ----- */}
             <div>
                 <h2>{userFormData.listTitle}</h2>
-                <ul>{userFormData.listContent}
-
-                    {/* {allListData.listContent.map((item) => (
-                        <li key={item._id}>{item.itemName}</li>
-                    ))} */}
+                <ul>
+                    <li>{allListData.listContent}</li>
                 </ul>
-
             </div>
 
 
@@ -157,7 +91,7 @@ const ListComponent = () => {
                 </ul>
                 
                     </div>*/}
-    </>
+        </>
     )
 }
 
