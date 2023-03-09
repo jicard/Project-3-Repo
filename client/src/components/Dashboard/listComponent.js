@@ -137,10 +137,11 @@ const ListComponent = () => {
 
             <div>
                 <h2>{allListData.listTitle}</h2>
-                <ul>
-                    {allListData.listContent.map((item) => (
+                <ul>{allListData.listContent}
+
+                    {/* {allListData.listContent.map((item) => (
                         <li key={item._id}>{item.itemName}</li>
-                    ))}
+                    ))} */}
                 </ul>
 
             </div>
