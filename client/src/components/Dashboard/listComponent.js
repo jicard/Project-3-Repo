@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, gql } from '@apollo/client';
 import { Form, Button} from "react-bootstrap";
-import { GET_ME } from '../../utils/queries';
+import { GET_ME, ALL_LISTS } from '../../utils/queries';
 import { ADD_LIST, ADD_LIST_ITEM, REMOVE_LIST } from '../../utils/mutations';
 import './dashboard.css';
 import Auth from "../../utils/auth";
 
 const ListComponent = () => {
+
+    // testing ALL_LISTS query to see that there is some connection between the front end and database
+    const { loading, data } = useQuery(ALL_LISTS)
+    const allListData = data?.allListData || [];
+    console.log('All List Data', allListData)
+
+
+
+
 
     const [userFormData, setUserFormData] = useState({
         listTitle: "",

@@ -10,7 +10,12 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+
+    allLists: async (parent, args, context) => {
+      return List.find();
+    }
   },
+
 
   Mutation: {
     //takes username, email, and password hash to create new user

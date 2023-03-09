@@ -9,3 +9,13 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const ALL_LISTS = gql`
+  query AllLists {
+    allLists {
+      _id
+      listTitle
+      listContent  
+  }
+}
+`;

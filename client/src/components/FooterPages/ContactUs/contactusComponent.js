@@ -15,8 +15,8 @@ const DevProfiles = () => {
       id: 1,
       Name: "John Grant",
       img: johnGrant,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      Portfolio: "https://github.com/jgrant928",
+      GitHub: "https://github.com/jgrant928",
       LinkedIn: "https://www.linkedin.com",
     },
     {
@@ -31,24 +31,24 @@ const DevProfiles = () => {
       id: 3,
       Name: "Julia Johnson",
       img: juliaJohnson,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      Portfolio: "https://jjohnson673.github.io/Portfolio_2.0/",
+      GitHub: "https://github.com/jjohnson673",
+      LinkedIn: "https://www.linkedin.com/in/julia--johnson/",
     },
     {
       id: 4,
       Name: "Mary Greenwood",
       img: maryGreenwood,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      Portfolio: "https://github.com/marysgreenwood",
+      GitHub: "https://github.com/marysgreenwood",
+      LinkedIn: "https://www.linkedin.com/in/mary-greenwood-30b88450/",
     },
     {
       id: 5,
       Name: "Michael Smitte",
       img: michaelSmitte,
-      Portfolio: "https://shawncthomas.com",
-      GitHub: "https://www.github.com/",
+      Portfolio: "https://github.com/Hochipochi",
+      GitHub: "https://github.com/Hochipochi",
       LinkedIn: "https://www.linkedin.com",
     },
     {
@@ -57,9 +57,9 @@ const DevProfiles = () => {
       img: shawnThomas,
       Portfolio: "https://shawncthomas.com",
       GitHub: "https://www.github.com/",
-      LinkedIn: "https://www.linkedin.com",
+      LinkedIn: "https://www.linkedin.com/in/shawncthomas",
     },
-  ]
+  ];
 
   return (
     <div className="contactus-container">
@@ -74,17 +74,9 @@ const DevProfiles = () => {
                   style={{ backgroundImage: `url(${devprofile.img})` }}
                   key={`${devprofile.Name}-${devprofile.id}`}
                 ></div>
-                {/* <p className="dev-name"> */}
                 <div className="dev-name">
                   <p>{`${devprofile.Name}`}</p>
                 </div>
-                {/* </p> */}
-                {/* </div> */}
-                {/* <div className="dev-name">
-                <p className="dev-name">
-                  <h6>{`${devprofile.Name}`}</h6>
-                </p>
-              </div> */}
                 <div className="dev-links">
                   <a
                     href={devprofile.Portfolio}
@@ -118,7 +110,6 @@ const DevProfiles = () => {
       </div>
     </div>
   );
-}
+};
 
 export default DevProfiles;
-
