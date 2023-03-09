@@ -72,21 +72,24 @@ const resolvers = {
     //addList--takes listName, creates list and pushes to current User's array of lists
     addList: async (parent, { listTitle, listContent }, context) => {
       console.log(context);
+    
       if (context.user) {
         const list = await List.create({
           listTitle,
-          listUser: context.user.username,
           listContent
         });
+        
         return User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: {list: [list]}
+          { $addToSet: {list}
           }
           );
+          
       } 
       else {
       throw new AuthenticationError("You need to be logged in!");
       }
+      
     },
 
     //addListItem--takes listName, itemName and itemNotes, creates list item and pushes to list
