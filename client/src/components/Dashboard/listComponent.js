@@ -136,8 +136,8 @@ const ListComponent = () => {
 {/* pull listTitle and listContent from database and display on dashboard */}
 
             <div>
-                <h2>{allListData.listTitle}</h2>
-                <ul>{allListData.listContent}
+                <h2>{userFormData.listTitle}</h2>
+                <ul>{userFormData.listContent}
 
                     {/* {allListData.listContent.map((item) => (
                         <li key={item._id}>{item.itemName}</li>
