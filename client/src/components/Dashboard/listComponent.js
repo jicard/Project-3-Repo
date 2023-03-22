@@ -9,13 +9,9 @@ import Auth from "../../utils/auth";
 const ListComponent = () => {
 
     // testing ALL_LISTS query to see that there is some connection between the front end and database
-    const { loading, data } = useQuery(ALL_LISTS)
-    const allListData = data?.allListData || [];
-    console.log('All List Data', allListData)
-
-
-
-
+    //const { loading, data } = useQuery(ALL_LISTS)
+    //const allListData = data?.allListData || [];
+    //console.log('All List Data', allListData)
 
     const [userFormData, setUserFormData] = useState({
         listTitle: "",
@@ -27,6 +23,14 @@ const ListComponent = () => {
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setUserFormData({ ...userFormData, [name]: value });
+      };
+let listTitleOnPage = ''
+let listContentOnPage = ''
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        console.log(userFormData);
+        addList({ variables: {listTitle: userFormData.listTitle, listContent: userFormData.listContent}})
+        alert('List added!') 
     };
 
     const handleFormSubmit = (event) => {
@@ -35,7 +39,6 @@ const ListComponent = () => {
         addList({ variables: { listTitle: userFormData.listTitle, listContent: userFormData.listContent } })
         alert('List added!')
     };
-
 
     return (
         <>
@@ -62,45 +65,21 @@ const ListComponent = () => {
                         onChange={handleInputChange}
                         value={userFormData.listContent}
                     />
-                </Form.Group>
-                <Button
-                    type="submit"
-                    variant="success"
-                >
-                    Submit
-                </Button>
-            </Form>
 
-            {/* pull listTitle and listContent from database and display on dashboard */}
-            {/* ----- FIX AFTER PRESENTATION ----- */}
-            <div>
-                <h2>{userFormData.listTitle}</h2>
-                <ul>
-                    <li>{allListData.listContent}</li>
-                </ul>
-            </div>
-
-
-
-            {/*<div>
-                <h2>{userData.lists[0].listName}</h2>
-                <ul>
-                    {userData.lists[0].listItems.map((item) => (
-                        <li key={item._id} onClick={handleStrikethrough}>{item.itemName}</li>
-                    ))}
-                </ul>
-                
-                    </div>*/}
-        </>
-    )
+            </Form.Group>
+            <Button
+                type="submit"
+                variant="success"
+            >
+                Submit
+            </Button>
+        </Form>
+         <div>
+            <h2></h2>
+            <h4></h4>
+        </div>
+    </>
 }
 
 
 export default ListComponent;
-
-//
-//<h3
-// style={{
-//     textDecoration: elem.strike ? 'line-through' : 'none',
-//   }}
-// >
