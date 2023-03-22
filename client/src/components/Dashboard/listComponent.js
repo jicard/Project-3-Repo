@@ -33,13 +33,6 @@ let listContentOnPage = ''
         alert('List added!') 
     };
 
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        console.log(userFormData);
-        addList({ variables: { listTitle: userFormData.listTitle, listContent: userFormData.listContent } })
-        alert('List added!')
-    };
-
     return (
         <>
             <div className="list">
