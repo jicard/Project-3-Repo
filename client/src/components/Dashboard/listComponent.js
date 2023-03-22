@@ -72,7 +72,8 @@ let listContentOnPage = ''
             <h4></h4>
         </div>
     </>
-}
+    );
+};
 
 
 export default ListComponent;
